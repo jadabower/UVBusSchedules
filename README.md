@@ -32,6 +32,10 @@
 * [Vue debugger (Vue.js devtools - Chrome extension)](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd/related?hl=en)
 * [parsing strings in JS (stackoverflow)](https://stackoverflow.com/questions/1216505/how-to-parse-a-string-in-javascript)
 * [Vue tutorial (Vuejs.org)](https://vuejs.org/tutorial/#step-4)
+* [JS parseInt (mozilla)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+* [reactivity in Vue (Vue docs)](https://vuejs.org/guide/essentials/reactivity-fundamentals.html#ref)
+* []()
+* []()
 * []()
 
 # Future Work
