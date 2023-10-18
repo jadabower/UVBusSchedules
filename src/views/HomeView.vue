@@ -1,11 +1,13 @@
 <template>
   <main>
-    <ul>
-      <li v-for="(item, index) in busRouteData" :key="'item' + index">
-        {{ item }}
-      </li>
-    </ul>
-    <div>Hello?</div>
+    <BusRoute v-for="(item, index) in busRouteData"
+    :key="'item' + index"
+    :busLine="item.bus_line"
+    :departureLocation="item.departure_location"
+    :destinationLocation="item.destination_location"
+    :estDepartureTime="item.est_departure"
+    >
+    </BusRoute>
   </main>
 </template>
 
@@ -18,6 +20,7 @@ import {
   ref as refFirebase,
   onValue
 } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js'
+import BusRoute from '../components/BusRoute.vue';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -43,7 +46,12 @@ const busRouteData = ref([])
 onMounted(() => {
   onValue(busRouteRef, (snapshot) => {
     const data = snapshot.val()
-    busRouteData.value = data
+    busRouteData.value = SortDataByTime([...data])
   })
 })
+
+function SortDataByTime(data) {
+  return data.sort(
+    (route1, route2) => (route1.est_departure < route2.est_departure) ? -1 : (route1.est_departure > route2.est_departure) ? 1 : 0);
+}
 </script>
