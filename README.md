@@ -34,7 +34,7 @@
 * [Vue tutorial (Vuejs.org)](https://vuejs.org/tutorial/#step-4)
 * [JS parseInt (mozilla)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 * [reactivity in Vue (Vue docs)](https://vuejs.org/guide/essentials/reactivity-fundamentals.html#ref)
-* []()
+* [sorting a list of objects in JS (scaler/topics)](https://www.scaler.com/topics/javascript-sort-an-array-of-objects/)
 * []()
 * []()
 
