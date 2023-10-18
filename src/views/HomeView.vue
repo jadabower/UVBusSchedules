@@ -6,6 +6,7 @@
     :departureLocation="item.departure_location"
     :destinationLocation="item.destination_location"
     :estDepartureTime="item.est_departure"
+    :daysRunning="item.days_running"
     >
     </BusRoute>
   </main>
@@ -53,5 +54,9 @@ onMounted(() => {
 function SortDataByTime(data) {
   return data.sort(
     (route1, route2) => (route1.est_departure < route2.est_departure) ? -1 : (route1.est_departure > route2.est_departure) ? 1 : 0);
+}
+
+function FilterOutBusLine(data, busLine) {
+  return data.filter((item) => !(item.bus_line == busLine));
 }
 </script>

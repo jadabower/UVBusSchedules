@@ -1,8 +1,11 @@
 <template>
   <div :class="busLine" id="element">
     {{ convertTime(estDepartureTime) }} : {{ departureLocation }} -> {{ destinationLocation }}
-    <h6 :class="busLine" id="busLine" align="right">{{ StringifyBusLine(busLine) }}</h6>
-  </div>
+    <div :class="busLine" id="rightItems">
+        <h6 id="daysRunning" align="right">{{ StringifyDaysRunning(daysRunning) }}</h6>
+        <h6 id="busLine" align="right">{{ StringifyBusLine(busLine) }}</h6>
+    </div>
+</div>
 </template>
 
 <script setup>
@@ -10,7 +13,8 @@ defineProps({
   busLine: String,
   departureLocation: String,
   destinationLocation: String,
-  estDepartureTime: String
+  estDepartureTime: String,
+  daysRunning: Object
 })
 
 function convertTime(time) {
@@ -32,34 +36,62 @@ function convertTime(time) {
 function StringifyBusLine(busLine) {
   return `${busLine} Line`
 }
+
+function StringifyDaysRunning(days) {
+  if (days == null)
+  {
+    return "";
+  }
+  else if (days.includes("T")) {
+    return "Tues/Thurs";
+  } else if (days.includes("S")) {
+    return "Saturday";
+  }
+  return "";
+}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .Green {
   background-color: rgb(177, 206, 160);
-  color: #889a78;
+  color: #728064;
 }
 
 .Red {
   background-color: rgb(220, 142, 123);
-  color: #9e6b5d;
+  color: #845a4e;
 }
 
 #element {
   color: white;
+  font-weight: bold;
   display: flex;
   margin: 15px auto;
   border-radius: 15px;
   padding: 1em;
   font-size: 20px;
-  width: 25vw;
+  width: 100%;
+}
+
+#rightItems {
+  clear: both;
+  display: grid;
+  grid-template-columns: 1/-1;
+  margin-right: -5px;
+  margin-left: auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#daysRunning {
+    font-weight: bold;
+  margin-bottom: auto;
+  margin-top: -5px;
 }
 
 #busLine {
-  display: inline;
-  margin-right: -5px;
+    font-weight: bold;
   margin-bottom: -5px;
-  margin-left: auto;
   margin-top: auto;
 }
 </style>

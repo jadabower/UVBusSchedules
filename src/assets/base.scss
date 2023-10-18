@@ -58,10 +58,13 @@
   font-weight: normal;
 }
 
+$background-blue: #242a3a;
+$text-color: white;
+
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+  color: $text-color;
+  background: $background-blue;
   transition:
     color 0.5s,
     background-color 0.5s;
