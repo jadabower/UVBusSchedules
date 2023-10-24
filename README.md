@@ -4,9 +4,7 @@ As a student living at the University View, Rexburg apartment complex, I noticed
 
 This project was an excellent challenge for me as a developer because I had never worked with Google Firebase or any kind of web app framework like Vue. Firebase is very easy to use to create a database, and it is quite simple to use in the app once the app and database are properly linked. I found Vue to be challenging but very well documented. I also had a good bit of help from some other developers to learn the system. It was a very good challenge to have to create something from the ground up, and added to my skills as a programmer significantly.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running (starting the server and navigating through the web pages) and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/WOIjE0tkYZ4)
 
 # Web Pages
 
