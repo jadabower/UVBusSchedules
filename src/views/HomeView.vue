@@ -112,7 +112,7 @@ function getBusRoutes() {
   // filter by time
   if (filterList.value.time != 0) {
     filteredSoFar = filteredSoFar.filter((value) => {
-      return value.est_departure > filterList.value.time
+      return value.est_departure >= filterList.value.time
     })
   }
   return filteredSoFar
