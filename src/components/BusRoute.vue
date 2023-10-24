@@ -2,10 +2,10 @@
   <div :class="busLine" id="element">
     {{ convertTime(estDepartureTime) }} : {{ departureLocation }} -> {{ destinationLocation }}
     <div :class="busLine" id="rightItems">
-        <h6 id="daysRunning" align="right">{{ StringifyDaysRunning(daysRunning) }}</h6>
-        <h6 id="busLine" align="right">{{ StringifyBusLine(busLine) }}</h6>
+      <h6 id="daysRunning" align="right">{{ StringifyDaysRunning(daysRunning) }}</h6>
+      <h6 id="busLine" align="right">{{ StringifyBusLine(busLine) }}</h6>
     </div>
-</div>
+  </div>
 </template>
 
 <script setup>
@@ -38,16 +38,14 @@ function StringifyBusLine(busLine) {
 }
 
 function StringifyDaysRunning(days) {
-  if (days == null)
-  {
-    return "";
+  if (days == null) {
+    return ''
+  } else if (days.includes('T')) {
+    return 'Tues/Thurs'
+  } else if (days.includes('S')) {
+    return 'Saturday'
   }
-  else if (days.includes("T")) {
-    return "Tues/Thurs";
-  } else if (days.includes("S")) {
-    return "Saturday";
-  }
-  return "";
+  return ''
 }
 </script>
 
@@ -84,13 +82,13 @@ function StringifyDaysRunning(days) {
 }
 
 #daysRunning {
-    font-weight: bold;
+  font-weight: bold;
   margin-bottom: auto;
   margin-top: -5px;
 }
 
 #busLine {
-    font-weight: bold;
+  font-weight: bold;
   margin-bottom: -5px;
   margin-top: auto;
 }

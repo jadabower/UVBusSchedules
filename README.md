@@ -1,10 +1,8 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+As a student living at the University View, Rexburg apartment complex, I noticed that the setup UV had for knowing where the shuttles are at what times was incredibly difficult to use. This sparked an idea: a website to easily find specific routes of where the shuttles will be and when. I created a database using Google Firebase's Realtime Database feature to hold all the information from the pamphlet hanging in the UV office, and connected it to a web app made in Vue. I then created components for the specific bus routes (to hold all the information in a readable manner), then added filters to filter down the list into specific routes being shown. 
 
-{Provide a description the web app that you wrote. Describe how to start a test server on your computer and what website to open up to see the first page of the app.}
-
-{Describe your purpose for writing this software.}
+This project was an excellent challenge for me as a developer because I had never worked with Google Firebase or any kind of web app framework like Vue. Firebase is very easy to use to create a database, and it is quite simple to use in the app once the app and database are properly linked. I found Vue to be challenging but very well documented. I also had a good bit of help from some other developers to learn the system. It was a very good challenge to have to create something from the ground up, and added to my skills as a programmer significantly.
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running (starting the server and navigating through the web pages) and a walkthrough of the code.}
 
@@ -12,17 +10,25 @@
 
 # Web Pages
 
-{Describe each of the web pages you created and how the web app transitions between each of them.  Also describe what is dynamically created on each page.}
+The Home page is where the user will be the majority of the time. It contains all the information about the bus routes and the filters the get the list of routes down to only the ones the user decides.
+
+The About page contains some simple information about the site and why I created it.
+
+The two web pages are linked by Vue's "router" capability.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+* Google Firebase (Realtime Database)
+* Visual Studio Code
+* Vue 3 (Composition API)
+* NPM (module: firebase)
+* JavaScript
+* HTML
+* CSS and SCSS
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
+* [firebase](https://console.firebase.google.com/)
 * [info on v-for (Vue docs)](https://vuejs.org/guide/essentials/reactivity-fundamentals.html#ref)
 * [import with alias's (mozilla)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 * [info on map in JS (w3schools)](https://www.w3schools.com/jsref/jsref_map.asp)
@@ -35,15 +41,15 @@
 * [JS parseInt (mozilla)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 * [reactivity in Vue (Vue docs)](https://vuejs.org/guide/essentials/reactivity-fundamentals.html#ref)
 * [sorting a list of objects in JS (scaler/topics)](https://www.scaler.com/topics/javascript-sort-an-array-of-objects/)
-* []()
-* []()
+* [some CSS styling (chatGPT)](https://chat.openai.com/c/afc64376-a726-4315-bfe9-e8cc7dc0b3b4)
+* [how to use emit (Vue docs)](https://vuejs.org/guide/components/events.html#event-arguments)
+* [how to emit inside of the script (LearnVue)](https://learnvue.co/articles/vue-emit-guide)
+* [how to use computed (Vue docs)](https://vuejs.org/guide/essentials/computed.html#basic-example)
+* [toggle (w3schools)](https://www.w3schools.com/howto/howto_css_switch.asp)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Host site on Netlify
 
 ## Project Setup
 
