@@ -29,6 +29,8 @@ function convertTime(time) {
     hour -= 12
     var newTime = `${hour}:${minute} pm`
     return newTime
+  } else if (hour == 12) {
+    return `${hour}:${minute} pm`
   }
   return `${hour}:${minute} am`
 }
