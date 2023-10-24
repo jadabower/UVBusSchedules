@@ -50,6 +50,8 @@ The two web pages are linked by Vue's "router" capability.
 # Future Work
 
 * Host site on Netlify
+* Make filter styles better
+* Add a filter for days (so that shuttles that run during devotional won't show up on Tuesday, etc.)
 
 ## Project Setup
 

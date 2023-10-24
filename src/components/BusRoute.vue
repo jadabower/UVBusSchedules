@@ -1,6 +1,6 @@
 <template>
   <div :class="busLine" id="element">
-    {{ convertTime(estDepartureTime) }} : {{ departureLocation }} -> {{ destinationLocation }}
+    {{ convertTime(estDepartureTime) }} : {{ departureLocation }} → {{ destinationLocation }}
     <div :class="busLine" id="rightItems">
       <h6 id="daysRunning" align="right">{{ StringifyDaysRunning(daysRunning) }}</h6>
       <h6 id="busLine" align="right">{{ StringifyBusLine(busLine) }}</h6>

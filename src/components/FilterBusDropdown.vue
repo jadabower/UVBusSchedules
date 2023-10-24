@@ -32,6 +32,7 @@ p {
 
 /* Reset default select styles */
 select {
+  margin: 5px;
   margin-left: auto;
   border: none;
   outline: none;
