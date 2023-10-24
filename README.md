@@ -28,6 +28,7 @@ The two web pages are linked by Vue's "router" capability.
 
 # Useful Websites
 
+* [this site on Netlify](https://uvshuttles.netlify.app/)
 * [firebase](https://console.firebase.google.com/)
 * [info on v-for (Vue docs)](https://vuejs.org/guide/essentials/reactivity-fundamentals.html#ref)
 * [import with alias's (mozilla)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
@@ -49,7 +50,6 @@ The two web pages are linked by Vue's "router" capability.
 
 # Future Work
 
-* Host site on Netlify
 * Make filter styles better
 * Add a filter for days (so that shuttles that run during devotional won't show up on Tuesday, etc.)
 
