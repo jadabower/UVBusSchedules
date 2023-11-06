@@ -10,13 +10,26 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
-defineProps({
+import {ref, onMounted} from 'vue'
+
+const emit = defineEmits(['filterChoice'])
+
+const props = defineProps({
   options: Object,
-  name: String
+  name: String,
+  startingValue: {
+    default: 0
+  }
+})
+console.log(props.startingValue);
+const value = ref(props.startingValue)
+
+onMounted(() => {
+  if (props.startingValue !== 0) {
+    emit('filterChoice', value)
+  }
 })
 
-const value = ref(0)
 </script>
 
 <style scoped lang="scss">

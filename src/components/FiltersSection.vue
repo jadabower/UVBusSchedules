@@ -4,7 +4,7 @@
     <FilterBusToggle name="Green Line" @toggle="(value) => {emitNewValue(value, 'greenLine')}"></FilterBusToggle>
     <FilterBusDropdown name="Departure Location" :options="locationOptions" @filterChoice="(value) => {emitNewValue(value, 'deptLoc')}"></FilterBusDropdown>
     <FilterBusDropdown name="Destination Location" :options="locationOptions" @filterChoice="(value) => {emitNewValue(value, 'destLoc')}"></FilterBusDropdown>
-    <FilterBusDropdown name="Starting Time" :options="timeOptions" @filterChoice="(value) => {emitNewValue(value, 'time')}"></FilterBusDropdown>
+    <FilterBusDropdown name="Starting Time" :startingValue="nowTime" :options="timeOptions" @filterChoice="(value) => {emitNewValue(value, 'time')}"></FilterBusDropdown>
   </h3>
 </template>
 
@@ -34,8 +34,11 @@ const locationOptions = {
   Broulims: 'Broulims',
   'L-Lot': 'L-Lot'
 }
+const date = new Date()
+const nowTime = ref(`${date.getHours()}:${date.getMinutes()}`)
 
 const timeOptions = {
+  [nowTime.value]: 'Now',
   0: 'Any',
   '08:00': '8:00 am',
   '09:00': '9:00 am',
